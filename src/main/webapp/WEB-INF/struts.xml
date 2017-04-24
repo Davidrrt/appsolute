@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: davra -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="appsolute" extends="struts-default">
+        <action name="home" class="mg.itu.utilproject.controller.HomeAction" namespace="/">
+             <result name="success">/index.jsp</result>
+        </action>
+    </package>
+</struts>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+    <class name="mg.itu.utilproject.modele.Employe" table="Employe">
+        <meta attribute="class-description">
+             
+        </meta>
+        <id name="id" column="idemp" type="int">
+            <generator class="native">
+                <param name="sequence">employe_idemp_seq</param>
+            </generator>
+        </id>
+        <property name="nomemp" column="nomemp" type="string"/>
+        <property name="metier" column="metier" type="string"/>
+        <property name="login" column="login" type="string"/>
+        <property name="pass" column="pass" type="string"/>
+        <property name="statut" column="statut" type="int"/>
+      
+    </class>
+</hibernate-mapping>
