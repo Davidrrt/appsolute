@@ -4,9 +4,9 @@
   <session-factory>
     <!-- Database connection settings -->
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/appsolute</property>
-    <property name="hibernate.connection.username">postgres</property>
-    <property name="hibernate.connection.password">fotsinavalona</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://ec2-23-23-237-68.compute-1.amazonaws.com:5432/dgts06e2ojhf9</property>
+    <property name="hibernate.connection.username">depdpvxhbegtmu</property>
+    <property name="hibernate.connection.password">ce2644e88169c6f96db27f925c9f01d5f43fad7014d22452ddd4ef7e031434c1</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <!-- JDBC connection pool (use the built-in) -->
     <!-- Echo all executed SQL to stdout -->
