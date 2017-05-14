@@ -16,10 +16,10 @@
             <h2>page introuvable!</h2>
             <% if(request.getSession().getAttribute("utilisateur")!=null){%>
             <h2>CAUSE: <% out.print(request.getAttribute("error")); %> </h2>
-             <a href="billet.html">Accueil</a>
+             <a href="index.html">Accueil</a>
             <%}else{ %>
                <h2>CAUSE: <% out.print(request.getAttribute("error")); %> </h2>
-            <a href="login.jsp">Accueil</a>
+            <a href="index.html">Accueil</a>
            
             <% } %>
 	</div>
