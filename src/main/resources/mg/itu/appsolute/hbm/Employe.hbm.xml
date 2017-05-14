@@ -1,23 +1,19 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC 
- "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
- "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="mg.itu.utilproject.modele.Employe" table="Employe">
-        <meta attribute="class-description">
+  <class name="mg.itu.appsolute.modele.Employe" table="Employe">
+    <meta attribute="class-description">
              
         </meta>
-        <id name="id" column="idemp" type="int">
-            <generator class="native">
-                <param name="sequence">employe_idemp_seq</param>
-            </generator>
-        </id>
-        <property name="nomemp" column="nomemp" type="string"/>
-        <property name="metier" column="metier" type="string"/>
-        <property name="login" column="login" type="string"/>
-        <property name="pass" column="pass" type="string"/>
-        <property name="statut" column="statut" type="int"/>
-      
-    </class>
+    <id name="id" column="idemp"  type="int">
+      <generator class="native">
+        <param name="sequence">employe_idemp_seq</param>
+      </generator>
+    </id>
+    <property column="nomemp" name="nomemp" type="string"/>
+    <property column="metier" name="metier" type="string"/>
+    <property column="login" name="login" type="string"/>
+    <property column="pass" name="pass" type="string"/>
+    <property column="statut" name="statut" type="int"/>
+  </class>
 </hibernate-mapping>

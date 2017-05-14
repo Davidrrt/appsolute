@@ -1,0 +1,57 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: davra -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <constant name="struts.action.extension" value="html" />
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="index" class="mg.itu.appsolute.controller.EmployeAction">
+            <result name="success">/www/application/index.jsp</result>
+        </action>
+        <action name="add" class="mg.itu.appsolute.controller.AppAction" method="add">
+            <result name="success">/www/application/app/add.jsp</result>
+        </action>
+        <action name="pradd" class="mg.itu.appsolute.controller.AppAction" method="pradd">
+            <result name="success">/www/application/app/redirect.jsp</result>
+        </action>
+        <action name="addal" class="mg.itu.appsolute.controller.AppAction" method="addAlbum">
+            <result name="success">/www/application/app/addAlbum.jsp</result>
+        </action>
+        <action name="praddal" class="mg.itu.appsolute.controller.AppAction" method="praddAlbum">
+            <result name="success">/www/application/app/redirect.jsp</result>
+        </action>
+        <action name="delete" class="mg.itu.appsolute.controller.AppAction" method="delete">
+            <result name="success">/www/application/app/redirect.jsp</result>
+        </action>
+        <action name="deleteal" class="mg.itu.appsolute.controller.AppAction" method="deleteAlbum">
+            <result name="success">/www/application/app/redirect.jsp</result>
+        </action>
+        <action name="edit" class="mg.itu.appsolute.controller.AppAction" method="edit">
+            <result name="success">/www/application/app/edit.jsp</result>
+        </action>   
+         <action name="predit" class="mg.itu.appsolute.controller.AppAction" method="predit">
+            <result name="success">/www/application/app/index.jsp</result>
+        </action>   
+        <action name="app" class="mg.itu.appsolute.controller.AppAction">
+            <result name="success">/www/application/app/index.jsp</result>
+        </action>
+         <action name="album" class="mg.itu.appsolute.controller.AppAction" method="album">
+            <result name="success">/www/application/app/album.jsp</result>
+        </action>
+        <action name="pdf" class="mg.itu.appsolute.controller.DownloadAction">
+            <result name="success" type="stream">
+                <param name="contentType">application/download</param> 
+                <param name="inputName">inputStream</param> 
+                <param name="bufferSize">1024</param>
+                <param name="contentDisposition">attachment;filename=${fileName}</param>
+                <param name="contentLength">${fileSize}</param>
+            </result>
+        </action>
+    
+    </package>
+    
+</struts>
+

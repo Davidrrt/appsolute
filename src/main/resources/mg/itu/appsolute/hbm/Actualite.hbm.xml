@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="mg.itu.appsolute.modele.Actualite" table="actualite">
+        <meta attribute="class-description">
+             
+        </meta>
+        <id column="idactu" name="id" type="int">
+            <generator class="native">
+                <param name="sequence">actualite_idactu_seq</param>
+            </generator>
+        </id>
+
+        <property column="dateactu" name="dateactu" type="date"/>
+        <property column="imageactu" name="imageactu" type="string"/>
+        <property column="titreactu" name="titreactu" type="string"/>
+        <property column="introactu" name="introactu" type="string"/>
+        <property column="contenuactu" name="contenuactu" type="string"/>
+    
+    
+    </class>
+</hibernate-mapping>
